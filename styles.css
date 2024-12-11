@@ -5,20 +5,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f0f0f0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .periodic-table {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
-  gap: 5px;
-  max-width: 90%;
-  margin: 20px;
-  background-color: #fff;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  gap: 5px; 
+}
+
+.periodic-table2 {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 5px; 
 }
 
 .element {
@@ -43,5 +50,14 @@ body {
 
 .element:hover {
   transform: scale(1.2);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.horizgap{
+  display: block;
+  width: 100%;
+}
+
+.table_2{
+  display: flex;
+  justify-content: center;
 }

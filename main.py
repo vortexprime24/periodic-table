@@ -78,7 +78,7 @@ def create_periodic_table_item(index, atomic_mass, symbol, name, text_color, bac
     # rect
     dwg.add(dwg.rect(insert=(0, 0), size=("70px", "70px"), fill=background_color))
     # border
-    dwg.add(dwg.rect(insert=(1, 1), size=("68px", "68px"), fill="none", stroke=text_color, stroke_width=1))
+    dwg.add(dwg.rect(insert=(1, 1), size=("68px", "68px"), fill="none", stroke=text_color, stroke_width=0.4))
     # index number
     dwg.add(dwg.text(
         str(index),
