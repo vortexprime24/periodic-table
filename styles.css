@@ -24,11 +24,11 @@ body {
 
 .periodic-table2 {
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: repeat(15, 1fr);
   gap: 5px; 
 }
 
-.element {
+.element, .info_element {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +48,7 @@ body {
   height: 60px;
 }
 
-.element:hover {
+.element:not(.info_element):hover {
   transform: scale(1.2);
 }
 

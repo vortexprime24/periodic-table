@@ -20,13 +20,13 @@ const elementsOrder = [
   "sodium", "magnesium", null, null, null, null, null, null, null, null, null, null, "aluminium", "silicon", "phosphorus", "sulfur", "chlorine", "argon",
   "potassium", "calcium", "scandium", "titanium", "vanadium", "chromium", "manganese", "iron", "cobalt", "nickel", "copper", "zinc", "gallium", "germanium", "arsenic", "selenium", "bromine", "krypton",
   "rubidium", "strontium", "yttrium", "zirconium", "niobium", "molybdenum", "technetium", "ruthenium", "rhodium", "palladium", "silver", "cadmium", "indium", "tin", "antimony", "tellurium", "iodine", "xenon",
-  "cesium", "barium", "lanthanum", "hafnium", "tantalum", "tungsten", "rhenium", "osmium", "iridium", "platinum", "gold", "mercury", "thallium", "lead", "bismuth", "polonium", "astatine", "radon",
-  "francium", "radium", "actinium", "rutherfordium", "dubnium", "seaborgium", "bohrium", "hassium", "meitnerium", "darmstadtium", "roentgenium", "copernicium", "nihonium", "flerovium", "moscovium", "livermorium", "tennessine", "oganesson",
+  "cesium", "barium", "LANTHANIDES", "hafnium", "tantalum", "tungsten", "rhenium", "osmium", "iridium", "platinum", "gold", "mercury", "thallium", "lead", "bismuth", "polonium", "astatine", "radon",
+  "francium", "radium", "ACTINIDES", "rutherfordium", "dubnium", "seaborgium", "bohrium", "hassium", "meitnerium", "darmstadtium", "roentgenium", "copernicium", "nihonium", "flerovium", "moscovium", "livermorium", "tennessine", "oganesson",
 
   "HORIZGAP",
 
-  null, null, null, "cerium", "praseodymium", "neodymium", "promethium", "samarium", "europium", "gadolinium", "terbium", "dysprosium", "holmium", "erbium", "thulium", "ytterbium", "lutetium", null,
-  null, null, null, "thorium", "protactinium", "uranium", "neptunium", "plutonium", "americium", "curium", "berkelium", "californium", "einsteinium", "fermium", "mendelevium", "nobelium", "lawrencium", null,
+  null, null, null, "lanthanum" ,"cerium", "praseodymium", "neodymium", "promethium", "samarium", "europium", "gadolinium", "terbium", "dysprosium", "holmium", "erbium", "thulium", "ytterbium", "lutetium", null,
+  null, null, null, "actinium" ,"thorium", "protactinium", "uranium", "neptunium", "plutonium", "americium", "curium", "berkelium", "californium", "einsteinium", "fermium", "mendelevium", "nobelium", "lawrencium", null,
 ]
 
 const periodicTableContainer = document.getElementById('periodic-table');
@@ -34,6 +34,24 @@ const periodicTableContainer2 = document.getElementById('periodic-table2');
 const container = document.getElementById('container');
 
 elementsOrder.forEach((element) => {
+  if(element === "LANTHANIDES"){
+    const img = document.createElement('img');
+    img.src = `elements/custom/lanthanides.svg`;
+    img.classList.add('info_element');
+    img.alt = element;
+    periodicTableContainer.appendChild(img);
+    return;
+  }
+
+  if(element === "ACTINIDES"){
+    const img = document.createElement('img');
+    img.src = `elements/custom/actinides.svg`;
+    img.classList.add('info_element');
+    img.alt = element;
+    periodicTableContainer.appendChild(img);
+    return;
+  }
+
   if(element === "HORIZGAP"){
     const gap = document.createElement('div');
     gap.classList.add('horizgap');
