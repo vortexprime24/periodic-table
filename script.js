@@ -66,10 +66,14 @@ elementsOrder.forEach((element) => {
     div.classList.add('empty');
     appendContainer.appendChild(div)
   } else {
+    const anchor = document.createElement('a');
+    anchor.href = `https://en.wikipedia.org/wiki/${element}`;
+    anchor.target = "_blank";
     const img = document.createElement('img');
-    img.src = `elements/${element}.svg`;
+    img.src = `/elements/${element}.svg`;
     img.classList.add('element');
     img.alt = element;
-    appendContainer.appendChild(img);
+    anchor.appendChild(img);
+    appendContainer.appendChild(anchor);
   }
 });
