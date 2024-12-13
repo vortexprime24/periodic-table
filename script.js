@@ -70,7 +70,7 @@ elementsOrder.forEach((element) => {
     anchor.href = `https://en.wikipedia.org/wiki/${element}`;
     anchor.target = "_blank";
     const img = document.createElement('img');
-    img.src = `/elements/${element}.svg`;
+    img.src = `elements/${element}.svg`;
     img.classList.add('element');
     img.alt = element;
     anchor.appendChild(img);

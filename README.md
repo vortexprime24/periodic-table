@@ -4,7 +4,7 @@ This repo contains two projects:
 2. Table visualizer - you can also check out the result after generating SVG(s).
 3. Periodic Table API - fetch info about one element, get a element's vector or list all elements in order
 
-[Visit here](https://yuridev24.github.io/periodic-table/)
+[Visit here](https://vortexprime24.github.io/periodic-table/)
 
 ## API
 ### Get all elements
